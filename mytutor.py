@@ -9,7 +9,16 @@ genai.configure(api_key=API_KEY, transport='rest')
 model = genai.GenerativeModel('gemini-2.5-flash')
 
 # --- 2. THE INTERFACE (Centered & Shifted Up) ---
-st.set_page_config(page_title="Syntax", page_icon="🎯", layout="centered")
+st.set_page_config(
+    page_title="Syntax", 
+    page_icon="🎯", 
+    layout="centered",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': None
+    }
+)
 
 st.markdown("""
     <style>
